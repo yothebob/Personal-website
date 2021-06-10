@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="whitebox">
+  <h2>About Me</h2>
+  <img src="{{url_for('static',filename='Screenshot_20210407-141229_2.png')}}" alt="Photo of me and My daughter Gwen." width="300" height="300">
+    <p>Hello, my name is Brandon Brodrick. this is a test. I am writing cool intresting things about me. I want to make this long. I have written many programs
+    and games and many other things. Please feel free to contact me for any work you want done. my skills involve python and gamemaker. Thanks for your time.</p>
+  <a id="github" href="https://github.com/yothebob" target="_blank"><img src="{{url_for('static', filename='github.png')}}" alt="Github" width="40" height="40"></a>
+</div>
+{% endblock %}

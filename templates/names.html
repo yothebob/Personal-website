@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="whitebox">
+  <h1>Names</h1>
+  {% for name in names %}
+    <h3>{{name}}</h3>
+  {% endfor %}
+</div>
+{% endblock %}
