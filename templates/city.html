@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="whitebox">
+  <h1>The City of []</h1>
+  <h3>known best for {{city_['reason']}}</h3>
+    <h1>Taverns:</h1>
+      {% for key,value in city_['taverns'].items()%}
+      <h1>{{value['name']}}</h1>
+        <h3>Whats unique about this tavern???</h3>
+          <p>{{value['trait']}}</p>
+          <h3>Whats on the Menu?</h3>
+          <ul>
+          {% for item in value['menu'] %}
+            <li class="list">{{ item }}</li>
+          {% endfor %}
+          </ul>
+          <h3>Whats Going On???</h3>
+          <ul>
+          {% for event in value['event'] %}
+          <li class="list">{{ event }}</li>
+          {% endfor %}
+          </ul>
+          <h3>Owner</h3>
+          {% for trait in value['owner']%}
+            <p>{{trait}}</p>
+          {% endfor %}
+          <h3>Staff Members</h3>
+          <ul>
+            {% for staff in value['staff'] %}
+            <li class="list">{{ staff }}</li>
+            {% endfor %}
+          </ul>
+      {% endfor %}
+    <h1>Stores:</h1>
+      {% for key,value in city_['stores'].items()%}
+        <h3>{{key}}</h3>
+        {% for traits in value %}
+          {% for item in traits %}
+            <p>{{item}}</p>
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+</div>
+{% endblock %}

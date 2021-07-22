@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="whitebox">
+  {% for hook in hooks %}
+    <p>{{hook}}</p>
+  {% endfor %}
+</div>
+{% endblock %}
