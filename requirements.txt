@@ -20,7 +20,6 @@ PyQt5==5.15.4
 PyQt5-sip==12.9.0
 python-docx==0.8.11
 python-prctl==1.8.1
-Reflector==2021.7.8.19.52.52
 requests==2.26.0
 soupsieve==2.2.1
 systemd-python==234
